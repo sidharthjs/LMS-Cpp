@@ -1,0 +1,64 @@
+# Project: LMS2
+# Makefile created by Dev-C++ 5.7.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Untitled2.o login.o t1_main.o registeration.o admin.o admin_course.o admin_trainer.o admin_tm.o admin_pm.o tm_main.o pm_main.o attendance.o t2_main.o
+LINKOBJ  = Untitled2.o login.o t1_main.o registeration.o admin.o admin_course.o admin_trainer.o admin_tm.o admin_pm.o tm_main.o pm_main.o attendance.o t2_main.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = LMS2.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Untitled2.o: Untitled2.cpp
+	$(CPP) -c Untitled2.cpp -o Untitled2.o $(CXXFLAGS)
+
+login.o: login.cpp
+	$(CPP) -c login.cpp -o login.o $(CXXFLAGS)
+
+t1_main.o: t1_main.cpp
+	$(CPP) -c t1_main.cpp -o t1_main.o $(CXXFLAGS)
+
+registeration.o: registeration.cpp
+	$(CPP) -c registeration.cpp -o registeration.o $(CXXFLAGS)
+
+admin.o: admin.cpp
+	$(CPP) -c admin.cpp -o admin.o $(CXXFLAGS)
+
+admin_course.o: admin_course.cpp
+	$(CPP) -c admin_course.cpp -o admin_course.o $(CXXFLAGS)
+
+admin_trainer.o: admin_trainer.cpp
+	$(CPP) -c admin_trainer.cpp -o admin_trainer.o $(CXXFLAGS)
+
+admin_tm.o: admin_tm.cpp
+	$(CPP) -c admin_tm.cpp -o admin_tm.o $(CXXFLAGS)
+
+admin_pm.o: admin_pm.cpp
+	$(CPP) -c admin_pm.cpp -o admin_pm.o $(CXXFLAGS)
+
+tm_main.o: tm_main.cpp
+	$(CPP) -c tm_main.cpp -o tm_main.o $(CXXFLAGS)
+
+pm_main.o: pm_main.cpp
+	$(CPP) -c pm_main.cpp -o pm_main.o $(CXXFLAGS)
+
+attendance.o: attendance.cpp
+	$(CPP) -c attendance.cpp -o attendance.o $(CXXFLAGS)
+
+t2_main.o: t2_main.cpp
+	$(CPP) -c t2_main.cpp -o t2_main.o $(CXXFLAGS)
